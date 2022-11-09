@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //a.print all odd numbers in an array
+    let oddNum = (arr) => {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0) {
+          console.log(arr[i])
+        }
+      }
+    }
+    oddNum([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+
+    //b.convert the all strings in to caps
+    
+    var toUppercase1 = ["prassanna", "victor", "darwin", "Ashok", "daha", "bala"].map((n) => n.toUpperCase())
+    console.log(toUppercase1)
+
+
+    //c.sum of all array
+    var array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var odd = (array) => {
+      var result1 = array.reduce((acc, cv) => acc + cv)
+      console.log(result1)
+    }
+    odd(array);
+
+
+    //d.return all the prime number in an array
+    var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let numArray = numArray.filter((number) => {
+      for (var i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) return false;
+      }
+      return true;
+    });
+    console.log(numArray);
+
+
+    //e.return all the palindrome an array
+    let checkPalindrome = (arr) => {
+      for (let i = 0; i < arr.length / 2; i++) {
+        if (arr[i] !== arr[arr.length - 1 - i]) {
+          return 'It is not a palindrome';
+        }
+      }
+      return 'It is a palindrome';
+    }
+    console.log(checkPalindrome([2, 1, 1, 2]))
+
+  </script>
+</body>
+
+</html>
